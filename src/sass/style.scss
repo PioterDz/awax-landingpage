@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+.container {
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 1200px;
+    margin: 0;
+}
+
 @import './components/variables';
 @import './components/mixins';
+
+@import './fontawesome/fontawesome';
+@import './fontawesome/solid';
+@import './fontawesome/brands';
+@import './fontawesome/regular';
 
 @import './components/navbar';
 @import './components/hero';

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm i -D autoprefixer-cli node-sass npm-run-all parcel-bundler posthtml-include",
+    "install": "npm i -D autoprefixer-cli node-sass npm-run-all parcel-bundler posthtml-include", 
     "prefixer": "autoprefixer-cli -o css/style.css",
     "clean": "rimraf dist",
     "sass": "node-sass src/sass/style.scss -o css/ --watch",

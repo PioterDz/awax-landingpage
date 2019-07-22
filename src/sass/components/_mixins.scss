@@ -9,3 +9,29 @@
     justify-content: $just;
     align-items: $align;
 }
+
+@mixin font-style($size, $weight, $color, $transform) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+}
+
+%onhover {
+    transition: 0.3s ease-in;
+}
+
+@mixin button($font-color, $backgr-color, $hover-font-color) {
+    @include font-style(12px, 700, $font-color, uppercase);
+    background-color: $backgr-color;
+    border-radius: 20px;
+    border: none;
+    padding: 20px 60px;
+    cursor: pointer;
+
+    &:hover {
+        @extend %onhover;
+        background-color: rgba($backgr-color, 0.6);
+        color: rgba($hover-font-color, 0.5);
+    }
+}

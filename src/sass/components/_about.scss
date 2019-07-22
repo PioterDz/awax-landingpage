@@ -1,0 +1,25 @@
+.about {
+
+    header {
+
+    }
+
+    h5 {
+
+    }
+
+    .about-left-bar {
+
+        p {
+
+        }
+
+        button {
+            // @include button($font-brightcolor, $font-mediumcolor, $font-and-icons);
+        }
+    }
+
+    .about-right-bar {
+        background-image: url('../src/images/about-baner.jpg');
+    }
+}
