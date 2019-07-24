@@ -1,0 +1,44 @@
+.clients {
+    background-color: $medium-background;
+    @include flex(column, flex-start, center);
+    position: relative;
+    padding-bottom: 80px;
+
+    .section-header {
+        @include section-header($font-darkcolor, $font-and-icons);
+    }
+
+    .client-review {
+        @include flex(column, center, center);
+
+        img {
+            @include square-size(160px,160px);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: 'Catamaran', sans-serif;
+            @include font-style(60px, 700, $font-darkcolor, uppercase);
+            margin: 20px 0 0 0;
+        }
+
+        h3 {
+            @include font-style(25px, 700, $font-darkcolor, inherit);
+            margin: 20px 0 0 0;
+        }
+
+        h5 {
+            @include font-style(18px, 400, $font-darkcolor, inherit);
+            margin: 10px 0;
+        }
+
+        p {
+            @include text($font-and-icons);
+            margin: 0;
+        }
+    }
+
+    .dots {
+        @include dots($theme-color);
+    }
+}

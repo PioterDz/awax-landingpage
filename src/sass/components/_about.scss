@@ -1,25 +1,79 @@
 .about {
+    @include flex(column, center, center);
+    background-color: $medium-background;
+    padding-bottom: 80px;
 
-    header {
-
+    .section-header {
+        @include section-header($font-darkcolor, $font-and-icons);
     }
 
-    h5 {
+    .about-columns {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        grid-template-rows: 100%;
 
-    }
+        .about-left-bar {
+            grid-area: 1/1/2/2;
+            padding-right: 30px;
+            @include flex(column, flex-start, flex-start);
 
-    .about-left-bar {
+            p {
+                margin: 0;
+                @include text($font-darkcolor);
+                flex: 0.75;
+            }
 
-        p {
-
+            button {
+                @include button($font-brightcolor, $font-and-icons, $font-mediumcolor);
+                margin-top: 20px;
+            }
         }
 
-        button {
-            // @include button($font-brightcolor, $font-mediumcolor, $font-and-icons);
-        }
-    }
+        .about-right-bar {
+            grid-area: 1/2/2/3;
+            position: relative;
+            overflow: hidden;
 
-    .about-right-bar {
-        background-image: url('../src/images/about-baner.jpg');
+            &:hover {
+
+                img {
+                    @extend %onhover;
+                    transform: scale(1.5); 
+                    filter: brightness(0.8);
+                }
+
+                .watch-video {
+
+                    h2, .fa-play-circle:before {
+                        @extend %onhover;
+                        color: $font-mediumcolor;
+                    }
+                }
+            }
+
+            img {
+                @include square-size(100%, 100%);
+                filter: brightness(0.4);
+            }
+
+            .watch-video {
+                @include flex(row, center, center);
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                cursor: pointer;
+
+                h2 {
+                    @include font-style(26px, 700, $font-brightcolor, uppercase);
+                }
+
+                .fa-play-circle:before {
+                    font-size: 80px;
+                    color: white;
+                    margin: 0 20px;
+                }
+            }
+        }
     }
 }

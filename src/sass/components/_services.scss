@@ -1,0 +1,39 @@
+.services {
+    background-color: $dark-background;
+    @include flex(column, center, center);
+    padding-bottom: 50px;
+
+    .section-header {
+        @include section-header($font-brightcolor, $font-and-icons);
+    }
+
+    .list-of-services {
+        @include flex(row, center, center);
+
+        .service {
+            border-left: 1px solid $font-and-icons;
+            @include flex(column, center, center);
+
+            &:nth-child(4) {
+                border-right: 1px solid $font-and-icons;
+            }
+            
+            .fas::before, .far::before {
+                color: $theme-color;
+                font-size: 65px;
+            }
+
+            h2, p {
+                text-align: center;
+            }
+
+            h2 {
+                @include font-style(18px, 700, $font-brightcolor, uppercase);
+            }
+
+            p {
+                @include text($font-and-icons);
+            }
+        }
+    }
+}

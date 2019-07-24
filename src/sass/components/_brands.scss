@@ -1,0 +1,11 @@
+.brands {
+
+    .brands-container {
+        @include flex(row, space-between, center);
+
+        img {
+            @include square-size(140px, 100px);
+            padding: 20px 0;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.projects {
+    @include flex(column, center, center);
+    background-color: $medium-background;
+    padding-bottom: 50px;
+
+    .section-header {
+        @include section-header($font-darkcolor, $font-and-icons);
+    }
+
+    .gallery-tabs {
+        @include flex(row, center, center);
+        margin-bottom: 10px;
+        border-radius: 40px;
+        background-color: $font-and-icons;
+
+        .tab {
+            text-transform: uppercase;
+            padding: 15px 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 14px;
+            position: relative;
+            border: 5px solid transparent;
+
+            &:hover {
+                @extend %onhover;
+                border-bottom: 5px solid $theme-color;
+            }
+
+            &::after {
+                content:''; 
+                display: block;
+                background: $font-brightcolor; 
+                position: absolute; 
+                bottom: 3px;
+                left: -16px;
+                height: 39px;
+                width: 1px;
+            }
+
+            &:nth-child(1) {
+                margin-left: 25px;
+
+                &::after {
+                    background: transparent;
+                }
+            }
+
+            &:nth-child(6) {
+                margin-right: 25px;
+            }
+        }    
+    }
+
+    .projects-gallery {
+        @include flex(column, center, center);
+        margin: 20px 0;
+
+        .row {
+            @include flex(row, center, center);
+
+            .gallery-img {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+
+                    img {
+                        @extend %onhover;
+                        filter: brightness(0.4);
+                    }
+
+                    .gallery-text {
+                        display: block;
+                    }
+                }
+
+                .gallery-text {
+                    position: absolute;
+                    text-align: center;
+                    margin: 0 20px;
+                    top: 25%;
+                    display: none;
+                    z-index: 1;
+
+                    h5, p {
+                        margin: 0;
+                    }
+
+                    h5 {
+                        @include font-style(16px, 400, $font-brightcolor, uppercase);
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        @include font-style(12px, 4000, $font-and-icons, inherit);
+                    }
+
+                }
+
+                img {
+                    width: calc(100% - 20px);
+                    margin: 10px;
+
+                    &:hover {
+                        filter: brightness(0.4);
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        @include button($font-brightcolor, $theme-color, $font-darkcolor);
+    }
+}

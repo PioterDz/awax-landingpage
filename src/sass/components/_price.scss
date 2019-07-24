@@ -1,0 +1,47 @@
+.price {
+    @include flex(column, center, center);
+    background-color: $medium-background;
+    padding-bottom: 30px;
+
+    .section-header {
+        @include section-header($font-darkcolor, $font-and-icons);
+    }
+
+    .price-container {
+        width: 100%;
+        @include flex(row, space-between, center);
+
+        .price-box {
+            @include flex(column, flex-start, center);
+            background-color: $bright-background;
+            padding: 20px 40px;
+
+            h3 {
+                @include font-style(16px, 700, $font-darkcolor, uppercase);
+            }
+
+            h1 {
+                @include font-style(30px, 700, $font-darkcolor, uppercase);
+                margin: 0;
+            }
+
+            h6 {
+                @include font-style(15px, 400, $font-and-icons, uppercase);
+                margin: 0 0 20px 0;
+            }
+
+            p {
+                @include font-style(14px, 400, $font-darkcolor, inherit);
+                text-align: center;
+                position: relative;
+
+            }
+
+            button {
+                @include button($font-brightcolor, $font-and-icons, $font-darkcolor);
+                padding: 15px 40px;
+                margin-top: 15px;
+            }
+        }
+    }
+}

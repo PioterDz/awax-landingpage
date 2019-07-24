@@ -43,29 +43,7 @@
     }
 
     .dots {
-        @include flex(row, center, center);
-        position: absolute;
-        top: 85%;
-        transform: translate(0, 100%);
-        z-index: 1;
-
-        .dot {
-            @include square-size(16px, 16px);
-            border-radius: 50%;
-            background-color: transparent;
-            border: 2px solid $theme-color;
-            margin: 6px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: $theme-color;
-                @extend %onhover;
-            }
-        }
-
-        .active {
-            background-color: $theme-color;
-        }
+        @include dots($theme-color);
     }
 
     .phone-icon {
@@ -90,9 +68,9 @@
         &:before {
             content: fa-content($fa-var-phone-alt);
             position: absolute;
+            font-size: 50px;
             top: 18%;
             left: 18%;
-            transform: translate(100%, 100%);
         }
     }
 }
