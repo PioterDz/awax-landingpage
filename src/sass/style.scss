@@ -1,18 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap');
 
-.container {
-    font-family: 'Ubuntu', sans-serif;
-    max-width: 1600px;
-    margin: 0;
-}
-
-.section-padding {
-    padding: 0 15%;
-}
-
 @import './components/variables';
 @import './components/mixins';
+
+@import './components/patterns';
 
 @import './fontawesome/fontawesome';
 @import './fontawesome/solid';
@@ -28,3 +20,8 @@
 @import './components/clients';
 @import './components/brands';
 @import './components/price';
+@import './components/premium';
+@import './components/facts';
+@import './components/tellabout';
+@import './components/contact';
+@import './components/googlemap';

@@ -3,10 +3,6 @@
     background-color: $medium-background;
     padding-bottom: 30px;
 
-    .section-header {
-        @include section-header($font-darkcolor, $font-and-icons);
-    }
-
     .price-container {
         width: 100%;
         @include flex(row, space-between, center);

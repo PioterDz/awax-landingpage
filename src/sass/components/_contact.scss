@@ -1,0 +1,44 @@
+.contact {
+
+    .contact-form {
+        width: 60%;
+        margin: auto;
+
+        form {
+            @include flex(column, center, center);
+
+            input {
+                border: none;
+                border-bottom: 2px solid $font-and-icons;
+                padding: 10px;
+            }
+
+            .form-row {
+                width: 100%;
+                margin-bottom: 40px;
+
+                .form-name, .form-mail {
+                    width: 43%;
+                }
+
+                .form-name {
+                    margin-right: 5%;
+                }
+            }
+
+            .form-subject, .form-msg {
+                width: 95%;
+                margin-bottom: 80px;
+            }
+
+            .form-msg {
+                margin-bottom: 40px;
+            }
+
+            button {
+                @include button($font-brightcolor, $theme-color, $font-darkcolor);
+                margin-bottom: 70px;
+            }
+        }
+    }
+}

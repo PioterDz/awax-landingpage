@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 1600px;
+    margin: 0;
+}
+
+.section-padding {
+    padding: 0 15%;
+}
+
+.section-header {
+    @include section-header($font-darkcolor, $font-and-icons);
+}

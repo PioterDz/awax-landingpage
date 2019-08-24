@@ -4,10 +4,6 @@
     position: relative;
     padding-bottom: 80px;
 
-    .section-header {
-        @include section-header($font-darkcolor, $font-and-icons);
-    }
-
     .client-review {
         @include flex(column, center, center);
 

@@ -2,10 +2,7 @@
     @include flex(column, center, center);
     background-color: $medium-background;
     padding-bottom: 80px;
-
-    .section-header {
-        @include section-header($font-darkcolor, $font-and-icons);
-    }
+    position: relative;
 
     .about-columns {
         display: grid;

@@ -1,0 +1,56 @@
+.tellabout {
+    @include flex(row, center, center);
+    border-bottom: 1px solid $font-and-icons;
+    
+    .tell-header {
+        @include flex(row, center, center);
+
+        .fas {
+            color: $font-and-icons;
+            transform: scale(1.5);
+        }
+
+        header {
+            @include font-style(15px, 700, $font-and-icons, uppercase);
+            margin-left: 10px;
+        }
+    }
+
+
+    .social-icon {
+        @include flex(row, center, center);
+
+        .fa-stack {
+            transform: scale(0.5);
+            cursor: pointer;
+        }
+
+        .fab {
+            color: white;
+        }
+
+        .icon-background-twitter {
+            color: #00acee;
+        }
+
+        .icon-background-link {
+            color: #0e76a8;
+        }
+
+        .icon-background-fb {
+            color: #3b5998;
+        }
+
+        .icon-background-pin {
+            color: #c8232c;
+        }
+
+        .icon-background-g {
+            color: #db4a39;
+        }
+
+        p {
+            @include font-style(13px, 400, $font-and-icons, uppercase);
+        }
+    }
+}

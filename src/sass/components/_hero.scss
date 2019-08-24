@@ -58,6 +58,7 @@
         left: 85%;
         transform: translate(0, -50%);
         cursor: pointer;
+        z-index: 1;
 
         &:hover {
             @extend %onhover;
