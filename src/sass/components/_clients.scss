@@ -14,7 +14,7 @@
 
         h1 {
             font-family: 'Catamaran', sans-serif;
-            @include font-style(60px, 700, $font-darkcolor, uppercase);
+            @include font-style(60px, 700, $font-and-icons, uppercase);
             margin: 20px 0 0 0;
         }
 

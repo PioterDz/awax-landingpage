@@ -1,13 +1,14 @@
 .projects {
     @include flex(column, center, center);
-    background-color: $medium-background;
+    background-color: $bright-background;
     padding-bottom: 50px;
 
     .gallery-tabs {
         @include flex(row, center, center);
         margin-bottom: 10px;
         border-radius: 40px;
-        background-color: $font-and-icons;
+        border: 1px solid $font-and-icons;
+        background-color: $medium-background;
 
         .tab {
             text-transform: uppercase;
@@ -20,13 +21,22 @@
 
             &:hover {
                 @extend %onhover;
-                border-bottom: 5px solid $theme-color;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%,100%);
+                    @include square-size(95%,1px);
+                    border-bottom: 4px solid #B98B59;
+                }
             }
 
             &::after {
                 content:''; 
                 display: block;
-                background: $font-brightcolor; 
+                background: $font-and-icons; 
                 position: absolute; 
                 bottom: 3px;
                 left: -16px;
@@ -89,7 +99,7 @@
 
                     p {
                         margin-top: 10px;
-                        @include font-style(12px, 4000, $font-and-icons, inherit);
+                        @include font-style(12px, 4000, $font-brightcolor, inherit);
                     }
 
                 }

@@ -1,6 +1,7 @@
 .premium {
     @include flex(column, center, center);
     position: relative;
+    border-top: 1px solid $font-and-icons;
 
     .premium-content {
         display: grid;
@@ -26,8 +27,7 @@
                 .icon {
                     @include square-size(40px,40px);
                     position: relative;
-
-                    
+                    color: $theme-color;
                 }
 
                 h2 {
@@ -49,7 +49,7 @@
     }
 
     button {
-        @include button($font-brightcolor, $font-and-icons, $font-mediumcolor);
+        @include button($font-brightcolor, $theme-color, $font-mediumcolor);
         margin: 40px 0 50px 0;
     }
 }

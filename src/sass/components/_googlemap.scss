@@ -1,3 +1,46 @@
 .g-map {
-    background-image: url('../src/images/googlemap.png');
+    position: relative;
+
+    img {
+        filter: grayscale(100%);
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .adress-box {
+        background-color: $bright-background;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        padding: 50px 150px 50px 50px;
+
+        .row {
+            @include flex(row, flex-start, center);
+
+            .fa-stack {
+                transform: scale(0.7);
+            }
+
+            .far, .fas {
+                color: $font-brightcolor;
+            }
+
+            .fa-circle {
+                color: $font-and-icons;
+            }
+
+            p {
+                @include text($font-and-icons);
+            }
+        }
+    }
+
+    .pin-icon {
+        position: absolute;
+        transform: scale(3.5);
+        top: 30%;
+        right: 20%;
+        color: $theme-color;
+    }
 }

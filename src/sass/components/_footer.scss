@@ -1,0 +1,107 @@
+footer {
+    background-color: $dark-background;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px 0;
+        position: relative;
+
+        .arrow-up {
+            position: absolute;
+            top: 0;
+            left: -5%;
+            transform: translate(-100%,-50%);
+            cursor: pointer;
+            z-index: 1;
+
+            .circle-arrow {
+                color: $theme-color;
+            }
+
+            .fa-chevron-up {
+                color: $font-brightcolor;
+            }
+
+            &:hover {
+
+                .circle-arrow {
+                    @extend %onhover;
+                    color: rgba($theme-color, 0.6);
+                }
+
+                .fa-chevron-up {                
+                    @extend %onhover;
+                    color: rgba($font-darkcolor, 0.5);
+                }
+            }
+            
+        }
+
+        .socialmedia-footer {
+            grid-area: 1/1/2/2;
+            margin-right: 15px;
+            @include flex(column, space-between, flex-start);
+            
+            .social-media {
+
+                .fa-stack {
+                    color: $background-in-background;
+                    cursor: pointer;
+
+                    &:hover {
+
+                        .fa-circle {
+                            @extend %onhover;
+                            color: $theme-color;
+                        }
+                    }
+
+                    .fab, .fas {
+                        color: $font-brightcolor;
+                    }
+                }
+            }
+
+            .license {
+                color: white;
+            }
+        }
+
+        .footer-text {
+            grid-area: 1/2/2/3;
+            margin: 0 15px;
+
+            p {
+                @include text($font-and-icons);
+                margin: 0;
+            }
+        }
+
+        .subscribe {
+            background-color: $background-in-background;
+            grid-area: 1/3/2/4;
+            @include flex(column, center, center);
+            margin-left: 15px;
+
+            form {
+                @include flex(column, center, center);
+
+                input {
+                    border: none;
+                    border-bottom: 2px solid $font-and-icons;
+                    background-color: $background-in-background;
+                    color: $font-and-icons;
+                    text-align: center;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    @include button($font-brightcolor, $theme-color, $font-darkcolor);
+                    padding: 20px 50px;
+                }
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@
     @include flex(column, center, center);
     background-color: $medium-background;
     padding-bottom: 30px;
+    border-top: 1px solid $font-and-icons;
 
     .price-container {
         width: 100%;
@@ -10,7 +11,7 @@
         .price-box {
             @include flex(column, flex-start, center);
             background-color: $bright-background;
-            padding: 20px 40px;
+            padding: 20px 50px;
 
             h3 {
                 @include font-style(16px, 700, $font-darkcolor, uppercase);
@@ -34,9 +35,15 @@
             }
 
             button {
-                @include button($font-brightcolor, $font-and-icons, $font-darkcolor);
+                @include button($font-brightcolor, $font-darkcolor, $theme-color);
                 padding: 15px 40px;
                 margin-top: 15px;
+
+                &:hover {
+                    @extend %onhover;
+                    background-color: $theme-color;
+                    color: $font-brightcolor;
+                }
             }
         }
     }

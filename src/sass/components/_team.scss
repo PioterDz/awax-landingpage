@@ -61,7 +61,7 @@
 
                 i {
                     @include square-size(25px, 25px);
-                    color: $font-darkcolor;
+                    color: $font-brightcolor;
                     background-color: $font-and-icons;
                     border-radius: 50%;
                     margin: 0 5px;
@@ -71,7 +71,7 @@
                     &:hover {
                         @extend %onhover;
                         color: $font-brightcolor;
-                        background-color: $dark-background;
+                        background-color: $theme-color;
                     }
 
                     &::before {

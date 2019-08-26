@@ -21,7 +21,7 @@
             }
 
             button {
-                @include button($font-brightcolor, $font-and-icons, $font-mediumcolor);
+                @include button($font-brightcolor, $theme-color, $font-darkcolor);
                 margin-top: 20px;
             }
         }
