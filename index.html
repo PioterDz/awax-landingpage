@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Awax Page</title>
     <link rel="stylesheet" href="/style.78032849.css">
@@ -11,9 +11,12 @@
   <body>
     <div class="container">
 
-    <nav class="section-padding">
+    <nav class="section-padding nav">
     <img src="/logo-awax.4887c925.jpg">
-    <ul class="menu-list">
+    <div class="burger" id="bars">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="menu-list" id="menu">
         <li class="active">home</li>
         <li>about us</li>
         <li>services</li>
@@ -100,6 +103,23 @@
     <div class="section-header">
         <header>our projects</header>
         <h5>what we create</h5>
+    </div>
+    <div class="gallery-categories">
+        <ul>
+            <div class="select-category" id="selectGallery">
+                <a>Select category</a>
+                <i class="fas fa-caret-down"></i>
+            </div>
+ 
+            <ul class="gallery-list" id="listGallery">
+                <li>all</li>
+                <li>photos</li>
+                <li>branding</li>
+                <li>adverts</li>
+                <li>development</li>
+                <li>misc</li>
+            </ul>
+        </ul>
     </div>
     <div class="gallery-tabs">
         <div class="tab">all</div>
@@ -208,8 +228,10 @@
     <div class="workers-list">
         <div class="worker">
             <img src="/worker_001.ba32b937.jpg">
-            <h3>jane doe</h3>
-            <h5>master mind</h5>
+            <div class="worker-text">
+                <h3>jane doe</h3>
+                <h5>master mind</h5>
+            </div>
             <div class="social-media">
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-instagram"></i>
@@ -222,8 +244,10 @@
         </div>
         <div class="worker">
             <img src="/worker_002.70cd8d1c.jpg">
-            <h3>mike shiller</h3>
-            <h5>creative head</h5>
+            <div class="worker-text">
+                <h3>mike shiller</h3>
+                <h5>creative head</h5>
+            </div>
             <div class="social-media">
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-instagram"></i>
@@ -236,8 +260,10 @@
         </div>
         <div class="worker">
             <img src="/worker_003.cff2db3f.jpg">
-            <h3>anna johns</h3>
-            <h5>technical lead</h5>
+            <div class="worker-text">
+                <h3>anna johns</h3>
+                <h5>technical lead</h5>
+            </div>
             <div class="social-media">
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-instagram"></i>
@@ -298,44 +324,76 @@
             <h3>express</h3>
             <h1>$9.99</h1>
             <h6>/month</h6>
-            <p>Tracking issues</p>
-            <p>Add bugs through email</p>
-            <p>Notifications</p>
-            <p>Time tracking</p>
-            <p>Custom views</p>
+
+            <div class="btn-details" id="btnDetails">
+                <i class="fas fa-caret-down"></i>
+                <p>Show details</p>
+            </div>
+
+            <div class="price-details" id="priceDetails">
+                <p>Tracking issues</p>
+                <p>Add bugs through email</p>
+                <p>Notifications</p>
+                <p>Time tracking</p>
+                <p>Custom views</p>
+            </div>
             <button>choose</button>
         </div>
         <div class="price-box">
             <h3>standart</h3>
             <h1>$14.99</h1>
             <h6>/month</h6>
-            <p>Tracking issues</p>
-            <p>Add bugs through email</p>
-            <p>Notifications</p>
-            <p>Time tracking</p>
-            <p>Custom views</p>
+
+            <div class="btn-details" id="details">
+                <i class="fas fa-caret-down"></i>
+                <p>Show details</p>
+            </div>
+
+            <div class="price-details">
+                <p>Tracking issues</p>
+                <p>Add bugs through email</p>
+                <p>Notifications</p>
+                <p>Time tracking</p>
+                <p>Custom views</p>
+            </div>
             <button>choose</button>
         </div>
         <div class="price-box">
             <h3>luxe</h3>
             <h1>$19.99</h1>
             <h6>/month</h6>
-            <p>Tracking issues</p>
-            <p>Add bugs through email</p>
-            <p>Notifications</p>
-            <p>Time tracking</p>
-            <p>Custom views</p>
+
+            <div class="btn-details" id="details">
+                <i class="fas fa-caret-down"></i>
+                <p>Show details</p>
+            </div>
+
+            <div class="price-details">
+                <p>Tracking issues</p>
+                <p>Add bugs through email</p>
+                <p>Notifications</p>
+                <p>Time tracking</p>
+                <p>Custom views</p>
+            </div>
             <button>choose</button>
         </div>
         <div class="price-box">
             <h3>premium</h3>
             <h1>$24.99</h1>
             <h6>/month</h6>
-            <p>Tracking issues</p>
-            <p>Add bugs through email</p>
-            <p>Notifications</p>
-            <p>Time tracking</p>
-            <p>Custom views</p>
+
+            <div class="btn-details" id="details">
+                <i class="fas fa-caret-down"></i>
+                <p>Show details</p>
+            </div>
+
+            <div class="price-details">
+                <p>Tracking issues</p>
+                <p>Add bugs through email</p>
+                <p>Notifications</p>
+                <p>Time tracking</p>
+                <p>Custom views</p>
+            </div>
             <button>choose</button>
         </div>
     </div>
@@ -352,39 +410,41 @@
             <img src="/premium.1d3346d5.jpg">
         </div>
         <div class="premium-text">
-            <div class="first-feat">
-                <div class="feat-head">
+            <div class="first-feat feat">
+                <div class="feat-head" id="featHead">
                     <span class="icon fa-stack fa-2x">
                         <i class="fas fa-circle fa-stack-1x"></i>
                         <i class="fas fa-check fa-stack-1x fa-inverse"></i>
                     </span>
                     <h2>First feature</h2>
                 </div>
-                <p>Phasellus hendrerit nibh dolor, sit amet condimentum lorem consectetur sed. 
-                Morbi tempus, elit eu interdum tristique, ante eros bibendum leo, eget euismod quam dui sit amet nisi.</p>
-                <p>- FEATURE ONE</p>
-                <p>- FEATURE TWO</p>
-                <p>- FEATURE THREE</p>
+                <div class="feature-text" id="featureText">
+                    <p>Phasellus hendrerit nibh dolor, sit amet condimentum lorem consectetur sed. 
+                    Morbi tempus, elit eu interdum tristique, ante eros bibendum leo, eget euismod quam dui sit amet nisi.</p>
+                    <p>- FEATURE ONE</p>
+                    <p>- FEATURE TWO</p>
+                    <p>- FEATURE THREE</p>
+                </div>
             </div>
-            <div class="second-feat">
-                <div class="feat-head">
+            <div class="second-feat feat">
+                <div class="feat-head" id="featHead">
                     <span class="icon fa-stack fa-2x">
                         <i class="fas fa-circle fa-stack-1x"></i>
                         <i class="fas fa-check fa-stack-1x fa-inverse"></i>
                     </span>
                     <h2>Second feature</h2>
                 </div>
-                <p>Phasellus hendrerit nibh dolor, sit amet condimentum lorem consectetur sed.</p>
+                <p class="feature-text" id="featureText">Phasellus hendrerit nibh dolor, sit amet condimentum lorem consectetur sed.</p>
             </div>
-            <div class="third-feat">
-                <div class="feat-head">
+            <div class="third-feat feat">
+                <div class="feat-head" id="featHead">
                     <span class="icon fa-stack fa-2x">
                         <i class="fas fa-circle fa-stack-1x"></i>
                         <i class="fas fa-check fa-stack-1x fa-inverse"></i>
                     </span>
                     <h2>Third feature</h2>
                 </div>
-                <p>Morbi tempus, elit eu interdum tristique, ante eros bibendum leo, eget euismod quam dui sit amet nisi.</p>
+                <p class="feature-text" id="featureText">Morbi tempus, elit eu interdum tristique, ante eros bibendum leo, eget euismod quam dui sit amet nisi.</p>
             </div>
         </div>
     </div>
@@ -494,7 +554,7 @@
 
     <section class="g-map">
     <img src="/googlemap.a77fbecd.png">
-    <div class="adress-box">
+    <div class="adress-box" id="adressBox">
         <div class="row">
             <span class="fa-stack fa-2x">
                 <i class="fa fa-circle fa-stack-2x icon-background-g"></i>
@@ -531,7 +591,7 @@
             <p>www.envato.com</p>
         </div>
     </div>
-    <div class="pin-icon">
+    <div class="pin-icon" id="pin">
         <i class="fas fa-map-marker-alt"></i>
     </div>
 </section>
@@ -595,5 +655,7 @@
 </footer>
 
     </div>
+
+    <script type="text/javascript" src="/script.04c05cf5.js"></script>
   </body>
 </html>
