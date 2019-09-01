@@ -1,12 +1,17 @@
-nav {   
+.nav {   
     background-color: $dark-background;
-    @include flex(row, space-around, center);
     height: 100px;
 
+    .burger {
+        transform: scale(2);
+
+        i {
+            color: $theme-color;
+        }
+    }
+
     .menu-list {
-        @include flex(row, center, center);
         list-style-type: none;
-        height: 100%;
 
         li {
             @include font-style(12px, 700, $font-brightcolor, uppercase);
@@ -15,6 +20,7 @@ nav {
             height: 100%;
             @include flex(row, center, center);
             border-bottom: 10px solid transparent;
+            padding: 20px 0;
 
             &:hover {
                 @extend %onhover;
@@ -24,6 +30,56 @@ nav {
 
         .active {
             border-bottom: 10px solid $theme-color;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    nav {
+        @include flex(row, space-between, center);
+        position: relative;
+
+        .menu-list {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translate(0%,100%);
+        }
+
+        .show {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s ease-in;
+            @include flex(column, flex-start, flex-start);
+            z-index: 2;
+            background-color: $dark-background;
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        .burger {
+            order: -1;
+            display: block;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    nav {
+        @include flex(row, space-around, center);
+
+        .menu-list {
+            @include flex(row, center, center);
+        }
+    
+        .burger {
+            display: none;
         }
     }
 }

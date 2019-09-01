@@ -1,18 +1,46 @@
 body {
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    @include flex(column, center, center);
 }
 
 .container {
     font-family: 'Ubuntu', sans-serif;
     max-width: 1600px;
-    margin: 0;
-}
-
-.section-padding {
-    padding: 0 15%;
+    width: 100%;
 }
 
 .section-header {
     @include section-header($font-darkcolor, $font-and-icons);
 }
+
+/* media queries */
+
+@media (max-width: 575px) {
+    
+    .section-padding {
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .section-padding {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .section-padding {
+        padding: 0 7.5%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .section-padding {
+        padding: 0 15%;
+    }
+}
+
+

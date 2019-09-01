@@ -13,6 +13,10 @@
             background-color: $bright-background;
             padding: 20px 50px;
 
+            .btn-details {
+                display: none;
+            }
+
             h3 {
                 @include font-style(16px, 700, $font-darkcolor, uppercase);
             }
@@ -26,12 +30,14 @@
                 @include font-style(15px, 400, $font-and-icons, uppercase);
                 margin: 0 0 20px 0;
             }
+            
+            .price-details {
 
-            p {
-                @include font-style(14px, 400, $font-darkcolor, inherit);
-                text-align: center;
-                position: relative;
-
+                p {
+                    @include font-style(14px, 400, $font-darkcolor, inherit);
+                    text-align: center;
+                    position: relative;
+                }
             }
 
             button {
@@ -43,6 +49,38 @@
                     @extend %onhover;
                     background-color: $theme-color;
                     color: $font-brightcolor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .price {
+
+        .price-container {
+            @include flex(column, space-between, center);
+
+            .price-box {
+                padding: 20px 20vw;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                
+                .btn-details {
+                    @include flex(row, center, center);
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+
+                .price-details {
+                    display: none;
+                }
+
+                .show-details {
+                    @include flex(column, center, center);
                 }
             }
         }

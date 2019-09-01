@@ -75,3 +75,21 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .hero {
+
+        .hero-text {
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        .phone-icon {
+            left: 75%;
+        }
+    }
+}
+

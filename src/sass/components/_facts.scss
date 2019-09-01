@@ -42,3 +42,13 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .facts {
+
+        .facts-container {
+            flex-direction: column;
+        }
+    }
+}

@@ -117,79 +117,33 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"src/js/script.js":[function(require,module,exports) {
+function open(btn, elem, classToAdd) {
+  btn.addEventListener('click', function () {
+    elem.classList.toggle(classToAdd);
+  });
+} // NAVIGATION
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
 
-  return bundleURL;
+var bars = document.getElementById('bars');
+var menu = document.getElementById('menu');
+open(bars, menu, 'show'); // PROJECTS LIST
+
+var list = document.getElementById('listGallery');
+var select = document.getElementById('selectGallery');
+open(select, list, 'show-categories'); //PRICES
+
+var btnDetails = document.getElementById('btnDetails');
+var details = document.getElementById('priceDetails');
+open(btnDetails, details, 'show-details'); //PREMIUM
+
+var featureHeaders = document.querySelectorAll('#featHead');
+var featureTexts = document.querySelectorAll('#featureText');
+
+for (var i = 0; i < featureHeaders.length; i++) {
+  open(featureHeaders[i], featureTexts[i], 'show-feature');
 }
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\src\\webfonts\\fa-solid-900.eot":[["fa-solid-900.d1d07412.eot","src/webfonts/fa-solid-900.eot"],"src/webfonts/fa-solid-900.eot"],"./..\\src\\webfonts\\fa-solid-900.woff2":[["fa-solid-900.b164b3a8.woff2","src/webfonts/fa-solid-900.woff2"],"src/webfonts/fa-solid-900.woff2"],"./..\\src\\webfonts\\fa-solid-900.woff":[["fa-solid-900.7b5b70b9.woff","src/webfonts/fa-solid-900.woff"],"src/webfonts/fa-solid-900.woff"],"./..\\src\\webfonts\\fa-solid-900.ttf":[["fa-solid-900.595e6500.ttf","src/webfonts/fa-solid-900.ttf"],"src/webfonts/fa-solid-900.ttf"],"./..\\src\\webfonts\\fa-solid-900.svg":[["fa-solid-900.b805f895.svg","src/webfonts/fa-solid-900.svg"],"src/webfonts/fa-solid-900.svg"],"./..\\src\\webfonts\\fa-brands-400.eot":[["fa-brands-400.a98f32d1.eot","src/webfonts/fa-brands-400.eot"],"src/webfonts/fa-brands-400.eot"],"./..\\src\\webfonts\\fa-brands-400.woff2":[["fa-brands-400.db79a77a.woff2","src/webfonts/fa-brands-400.woff2"],"src/webfonts/fa-brands-400.woff2"],"./..\\src\\webfonts\\fa-brands-400.woff":[["fa-brands-400.ae7030dd.woff","src/webfonts/fa-brands-400.woff"],"src/webfonts/fa-brands-400.woff"],"./..\\src\\webfonts\\fa-brands-400.ttf":[["fa-brands-400.bf680f49.ttf","src/webfonts/fa-brands-400.ttf"],"src/webfonts/fa-brands-400.ttf"],"./..\\src\\webfonts\\fa-brands-400.svg":[["fa-brands-400.1a3428bb.svg","src/webfonts/fa-brands-400.svg"],"src/webfonts/fa-brands-400.svg"],"./..\\src\\webfonts\\fa-regular-400.eot":[["fa-regular-400.0e8c654b.eot","src/webfonts/fa-regular-400.eot"],"src/webfonts/fa-regular-400.eot"],"./..\\src\\webfonts\\fa-regular-400.woff2":[["fa-regular-400.65ed2a74.woff2","src/webfonts/fa-regular-400.woff2"],"src/webfonts/fa-regular-400.woff2"],"./..\\src\\webfonts\\fa-regular-400.woff":[["fa-regular-400.737536f1.woff","src/webfonts/fa-regular-400.woff"],"src/webfonts/fa-regular-400.woff"],"./..\\src\\webfonts\\fa-regular-400.ttf":[["fa-regular-400.90cc5f3c.ttf","src/webfonts/fa-regular-400.ttf"],"src/webfonts/fa-regular-400.ttf"],"./..\\src\\webfonts\\fa-regular-400.svg":[["fa-regular-400.a39a78a4.svg","src/webfonts/fa-regular-400.svg"],"src/webfonts/fa-regular-400.svg"],"./..\\src\\images\\hero-background.jpg":[["hero-background.42770b26.jpg","src/images/hero-background.jpg"],"src/images/hero-background.jpg"],"./..\\src\\images\\team\\team-background.jpg":[["team-background.352731d5.jpg","src/images/team/team-background.jpg"],"src/images/team/team-background.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -392,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/style.78032849.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/script.js"], null)
+//# sourceMappingURL=/script.04c05cf5.js.map

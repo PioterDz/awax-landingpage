@@ -44,3 +44,25 @@
         color: $theme-color;
     }
 }
+
+@media (max-width: 767px) {
+
+    .g-map {
+
+        .adress-box {
+            border-radius: 10px;
+            top: 40%;
+            left: 5%;
+            padding: 10px;
+
+            .row {
+
+                p {
+                    font-size: 10px;
+                }
+            }
+            
+        }
+    }
+
+}

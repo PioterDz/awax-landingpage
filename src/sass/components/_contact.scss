@@ -23,18 +23,16 @@
             .form-row {
                 width: 100%;
                 margin-bottom: 40px;
+                @include flex(row, space-between, center);
 
                 .form-name, .form-mail {
-                    width: 43%;
+                    width: 40%;
                 }
 
-                .form-name {
-                    margin-right: 5%;
-                }
             }
 
             .form-subject, .form-msg {
-                width: 95%;
+                width: 98%;
                 margin-bottom: 80px;
             }
 
@@ -45,6 +43,31 @@
             button {
                 @include button($font-brightcolor, $theme-color, $font-darkcolor);
                 margin-bottom: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .contact {
+
+        .contact-form {
+
+            form {
+
+                .form-row {
+                    @include flex(column, center, center);
+
+                    .form-name, .form-mail {
+                        width: 50vw;
+                        margin: 0;
+                    }
+                }
+
+                .form-subject, .form-msg {
+                    width: 50vw;
+                }
             }
         }
     }

@@ -10,3 +10,18 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .brands {
+        
+        .brands-container {
+            flex-wrap: wrap;
+            
+            img {
+                @include square-size(100px, 75px);
+            }
+        }
+    }
+
+}

@@ -74,3 +74,34 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .about {
+        padding-bottom: 40px;
+
+        .about-columns {
+            grid-template-columns: 100%;
+            grid-template-rows: 4fr 6fr;
+
+            .about-left-bar {
+                grid-area: 2/1/3/2;
+                @include flex(column, center, center);
+
+                p {
+                    text-align: center;
+                    margin-top: 40px;
+                }
+
+                button {
+                    margin-top: 40px;
+                }
+            }
+
+            .about-right-bar {
+                grid-area: 1/1/2/2;
+            }
+        }
+    }
+
+}

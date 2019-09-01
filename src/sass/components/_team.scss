@@ -43,16 +43,19 @@
                 margin: 50px 0;
             }
 
-            h3, h5 {
-                margin: 5px 0;
-            }
-            
-            h3 {
-                @include font-style(20px, 700, $font-darkcolor, uppercase);
-            }
+            .worker-text {
 
-            h5 {
-                @include font-style(14px, 400, $font-darkcolor, capitalize);
+                h3, h5 {
+                    margin: 5px 0;
+                }
+                
+                h3 {
+                    @include font-style(20px, 700, $font-darkcolor, uppercase);
+                }
+    
+                h5 {
+                    @include font-style(14px, 400, $font-darkcolor, capitalize);
+                }
             }
 
             .social-media {
@@ -87,5 +90,39 @@
 
     .dots {
         @include dots($theme-color);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .team {
+        height: auto;
+        
+        .workers-list {
+            @include flex(column, space-between, center);
+            padding-bottom: 80px;
+
+            .worker {
+                @include flex(row, center, center);
+                flex-wrap: wrap;
+                width: 75vw;
+                padding-bottom: 20px;
+                margin: 0 0 25px 0;
+                border-radius: 10px;
+
+                .social-media {
+                    margin: 0;
+                }
+
+                img {
+                    @include square-size(120px, 120px);
+                    margin: 20px;
+                }
+            }
+        }
+
+        .dots {
+            top: 90%;
+        }
     }
 }

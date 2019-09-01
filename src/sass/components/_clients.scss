@@ -38,3 +38,13 @@
         @include dots($theme-color);
     }
 }
+
+@media (max-width: 767px) {
+
+    .clients {
+
+        .dots {
+            top: 90%;
+        }
+    }
+}

@@ -3,6 +3,10 @@
     background-color: $bright-background;
     padding-bottom: 50px;
 
+    .gallery-categories {
+        display: none;
+    }
+
     .gallery-tabs {
         @include flex(row, center, center);
         margin-bottom: 10px;
@@ -118,5 +122,73 @@
 
     button {
         @include button($font-brightcolor, $theme-color, $font-darkcolor);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .projects {
+
+        .gallery-categories {
+            display: block;
+
+            ul {
+                padding: 0;
+                
+                .select-category {
+                    @include font-style(14px, 700, $font-and-icons, uppercase);
+                    border: 1px solid $font-and-icons;
+                    border-radius: 10px;
+                    padding: 15px;
+                }
+
+                .gallery-list {
+                    list-style-type: none;
+                    padding: 0;
+                    display: none;
+                }
+
+                .show-categories {
+                    display: block;
+                    border: 1px solid $font-and-icons;
+                    border-radius: 10px;
+
+                    li {
+                        @include font-style(12px, 400, $font-and-icons, uppercase);
+                        border-bottom: 1px solid $font-and-icons;
+                        text-align: center;
+                        padding: 10px 0;
+
+                        &:nth-child(6) {
+                            border: none;
+                        }
+
+                        &:hover {
+                            @include font-style(12px, 700, $theme-color, uppercase);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .gallery-tabs {
+            display: none;
+        }
+
+        .projects-gallery {
+
+            .row {
+                flex-wrap: wrap;
+
+                &:nth-child(2), &:nth-child(3) {
+                    display: none;
+                }
+
+                .gallery-img {
+                    width: 45vw;
+                }
+            }
+        }
     }
 }

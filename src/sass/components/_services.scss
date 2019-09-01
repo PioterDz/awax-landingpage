@@ -37,3 +37,32 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .services {
+
+        .list-of-services {
+            @include flex(column, center, center);
+
+            .service:nth-child(4) {
+                border: none;
+            }
+
+            .service {
+                border: none;
+                position: relative;
+                padding-bottom: 20px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    @include square-size(90vw, 100%);
+                    border-bottom: 1px solid $font-and-icons;
+                }
+            }
+        }
+    }
+
+}
