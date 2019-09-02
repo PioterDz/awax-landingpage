@@ -34,7 +34,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
 
     nav {
         @include flex(row, space-between, center);
@@ -47,6 +47,10 @@
             left: 0;
             bottom: 0;
             transform: translate(0%,100%);
+
+            li {
+                font-size: 10px;
+            }
         }
 
         .show {
@@ -69,7 +73,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
     nav {
         @include flex(row, space-around, center);

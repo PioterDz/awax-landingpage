@@ -55,7 +55,21 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199.98px) {
+
+    .price {
+
+        .price-container {
+
+            .price-box {
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
 
     .price {
 
@@ -86,3 +100,6 @@
         }
     }
 }
+
+
+

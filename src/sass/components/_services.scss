@@ -38,7 +38,25 @@
     }
 }
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 1199.98px) {
+
+    .services {
+
+        .list-of-services {
+
+            .service {
+
+                h2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
 
     .services {
 

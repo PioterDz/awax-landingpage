@@ -9,6 +9,7 @@
     }
 
     .adress-box {
+        @include flex(column, center, flex-start);
         background-color: $bright-background;
         position: absolute;
         top: 15%;
@@ -45,13 +46,37 @@
     }
 }
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 1199.98px) {
+
+    .g-map {
+    
+        .adress-box {
+            left: 10%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .g-map {
+    
+        .adress-box {
+            padding: 50px;
+            top: 10%;
+            left: 5%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
 
     .g-map {
 
         .adress-box {
             border-radius: 10px;
-            top: 40%;
+            top: 20%;
             left: 5%;
             padding: 10px;
 
@@ -63,6 +88,32 @@
             }
             
         }
-    }
 
+        .pin-icon {
+            right: 10%;
+        }
+    }
 }
+
+@media (max-width: 575.98px) {
+
+    .g-map {
+    
+        .adress-box {
+            display: none;
+        }
+
+        .pin-icon {
+            transform: scale(2);
+            top: 25%;
+            right: 5%;
+        }
+
+        .show-adress {
+            @include flex(column, center, flex-start);
+        }
+    }
+}
+
+
+

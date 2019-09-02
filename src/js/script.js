@@ -21,18 +21,26 @@ open(select, list, 'show-categories');
 
 //PRICES
 
-const btnDetails = document.getElementById('btnDetails');
-const details = document.getElementById('priceDetails');
+const btnDetails = document.querySelectorAll('#btnDetails');
+const details = document.querySelectorAll('#priceDetails');
 
-open(btnDetails, details, 'show-details');
+btnDetails.forEach((el, id) => {
+    open(el, details[id], 'show-details');
+});
 
 //PREMIUM
 
 const featureHeaders = document.querySelectorAll('#featHead');
 const featureTexts = document.querySelectorAll('#featureText');
 
-for(let i = 0 ; i < featureHeaders.length ; i++) {
-    open(featureHeaders[i], featureTexts[i], 'show-feature');
-}
+featureHeaders.forEach((el, id) => {
+    open(el, featureTexts[id], 'show-feature')
+});
 
+//MAP
+
+const pin = document.getElementById('pin');
+const adressBox = document.getElementById('adressBox');
+
+open(pin, adressBox, 'show-adress'); 
 

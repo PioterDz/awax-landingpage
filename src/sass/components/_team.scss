@@ -93,7 +93,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
 
     .team {
         height: auto;
@@ -114,6 +114,13 @@
                     margin: 0;
                 }
 
+                .worker-text {
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+
                 img {
                     @include square-size(120px, 120px);
                     margin: 20px;
@@ -123,6 +130,29 @@
 
         .dots {
             top: 90%;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .team {
+        
+        .workers-list {
+
+            .worker {
+
+                img {
+                    @include square-size(100px, 100px);
+                }
+
+                .worker-text {
+
+                    h3 {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 }

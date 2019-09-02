@@ -133,16 +133,21 @@ var list = document.getElementById('listGallery');
 var select = document.getElementById('selectGallery');
 open(select, list, 'show-categories'); //PRICES
 
-var btnDetails = document.getElementById('btnDetails');
-var details = document.getElementById('priceDetails');
-open(btnDetails, details, 'show-details'); //PREMIUM
+var btnDetails = document.querySelectorAll('#btnDetails');
+var details = document.querySelectorAll('#priceDetails');
+btnDetails.forEach(function (el, id) {
+  open(el, details[id], 'show-details');
+}); //PREMIUM
 
 var featureHeaders = document.querySelectorAll('#featHead');
 var featureTexts = document.querySelectorAll('#featureText');
+featureHeaders.forEach(function (el, id) {
+  open(el, featureTexts[id], 'show-feature');
+}); //MAP
 
-for (var i = 0; i < featureHeaders.length; i++) {
-  open(featureHeaders[i], featureTexts[i], 'show-feature');
-}
+var pin = document.getElementById('pin');
+var adressBox = document.getElementById('adressBox');
+open(pin, adressBox, 'show-adress');
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

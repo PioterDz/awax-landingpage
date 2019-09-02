@@ -48,11 +48,13 @@
 
     header {
         @include font-style(30px, 700, $header-color, uppercase);
+        text-align: center;
     }
 
     h5 {
         @include font-style(15px, 700, $subheader-color, uppercase);
         margin: 10px 0;
+        text-align: center;
     }
 }
 

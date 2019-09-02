@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap');
 
-@import './components/variables';
-@import './components/mixins';
+@import './common/variables';
+@import './common/mixins';
 
-@import './components/patterns';
+@import './common/patterns';
 
 @import './fontawesome/fontawesome';
 @import './fontawesome/solid';
