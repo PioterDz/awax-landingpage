@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap");
 @import url("https://use.fontawesome.com/6722d8bb1f.js");
+@import url("https://kit.fontawesome.com/a7c46ee3e8.js");
+
 .nav .menu-list li:hover, .hero .hero-text button:hover, .hero .dots .dot:hover, .hero .phone-icon:hover, .about .about-columns .about-left-bar button:hover, .about .about-columns .about-right-bar:hover img, .about .about-columns .about-right-bar:hover .watch-video h2, .about .about-columns .about-right-bar:hover .watch-video .fa-play-circle:before, .projects .gallery-tabs .tab:hover, .projects .projects-gallery .row .gallery-img:hover img, .projects button:hover, .team .workers-list .worker .social-media i:hover, .team .dots .dot:hover, .clients .dots .dot:hover, .price .price-container .price-box button:hover, .premium .dots .dot:hover, .premium button:hover, .contact .contact-form form button:hover, footer .footer-container .arrow-up:hover .circle-arrow, footer .footer-container .arrow-up:hover .fa-chevron-up, footer .footer-container .socialmedia-footer .social-media .fa-stack:hover .fa-circle, footer .footer-container .subscribe form button:hover {
   transition: 0.3s ease-in; }
 
@@ -3597,19 +3599,19 @@ readers do not read off random characters that represent icons */
   content: "f5bf"; }
 
 .fa-star:before {
-  content: "f005"; }
+  content: "\f005"; }
 
 .fa-star-and-crescent:before {
   content: "\f699"; }
 
 .fa-star-half:before {
-  content: "f089"; }
+  content: "\f089"; }
 
 .fa-star-half-alt:before {
-  content: "f5c0"; }
+  content: "\f5c0"; }
 
 .fa-star-of-david:before {
-  content: "f69a"; }
+  content: "\f69a"; }
 
 .fa-star-of-life:before {
   content: "\f621"; }
@@ -4380,10 +4382,10 @@ readers do not read off random characters that represent icons */
   content: "f2b1"; }
 
 .fa-youtube:before {
-  content: "f167"; }
+  content: "\f167"; }
 
 .fa-youtube-square:before {
-  content: "f431"; }
+  content: "\f431"; }
 
 .fa-zhihu:before {
   content: "f63f"; }
