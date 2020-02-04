@@ -1,0 +1,194 @@
+.projects {
+    @include flex(column, center, center);
+    background-color: $bright-background;
+    padding-bottom: 50px;
+
+    .gallery-categories {
+        display: none;
+    }
+
+    .gallery-tabs {
+        @include flex(row, center, center);
+        margin-bottom: 10px;
+        border-radius: 40px;
+        border: 1px solid $font-and-icons;
+        background-color: $medium-background;
+
+        .tab {
+            text-transform: uppercase;
+            padding: 15px 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 14px;
+            position: relative;
+            border: 5px solid transparent;
+
+            &:hover {
+                @extend %onhover;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%,100%);
+                    @include square-size(95%,1px);
+                    border-bottom: 4px solid #B98B59;
+                }
+            }
+
+            &::after {
+                content:''; 
+                display: block;
+                background: $font-and-icons; 
+                position: absolute; 
+                bottom: 3px;
+                left: -16px;
+                height: 39px;
+                width: 1px;
+            }
+
+            &:nth-child(1) {
+                margin-left: 25px;
+
+                &::after {
+                    background: transparent;
+                }
+            }
+
+            &:nth-child(6) {
+                margin-right: 25px;
+            }
+        }    
+    }
+
+    .projects-gallery {
+        @include flex(column, center, center);
+        margin: 20px 0;
+
+        .row {
+            @include flex(row, center, center);
+
+            .gallery-img {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+
+                    img {
+                        @extend %onhover;
+                        filter: brightness(0.4);
+                    }
+
+                    .gallery-text {
+                        display: block;
+                    }
+                }
+
+                .gallery-text {
+                    position: absolute;
+                    text-align: center;
+                    margin: 0 20px;
+                    top: 25%;
+                    display: none;
+                    z-index: 1;
+
+                    h5, p {
+                        margin: 0;
+                    }
+
+                    h5 {
+                        @include font-style(16px, 400, $font-brightcolor, uppercase);
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        @include font-style(12px, 4000, $font-brightcolor, inherit);
+                    }
+
+                }
+
+                img {
+                    width: calc(100% - 20px);
+                    margin: 10px;
+
+                    &:hover {
+                        filter: brightness(0.4);
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        @include button($font-brightcolor, $theme-color, $font-darkcolor);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .projects {
+
+        .gallery-categories {
+            display: block;
+
+            ul {
+                padding: 0;
+                
+                .select-category {
+                    @include font-style(14px, 700, $font-and-icons, uppercase);
+                    border: 1px solid $font-and-icons;
+                    border-radius: 10px;
+                    padding: 15px;
+                }
+
+                .gallery-list {
+                    list-style-type: none;
+                    padding: 0;
+                    display: none;
+                }
+
+                .show-categories {
+                    display: block;
+                    border: 1px solid $font-and-icons;
+                    border-radius: 10px;
+
+                    li {
+                        @include font-style(12px, 400, $font-and-icons, uppercase);
+                        border-bottom: 1px solid $font-and-icons;
+                        text-align: center;
+                        padding: 10px 0;
+
+                        &:nth-child(6) {
+                            border: none;
+                        }
+
+                        &:hover {
+                            @include font-style(12px, 700, $theme-color, uppercase);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .gallery-tabs {
+            display: none;
+        }
+
+        .projects-gallery {
+
+            .row {
+                flex-wrap: wrap;
+
+                &:nth-child(2), &:nth-child(3) {
+                    display: none;
+                }
+
+                .gallery-img {
+                    width: 45vw;
+                }
+            }
+        }
+    }
+}

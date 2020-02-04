@@ -1,0 +1,99 @@
+.premium {
+    @include flex(column, center, center);
+    position: relative;
+    border-top: 1px solid $font-and-icons;
+
+    .premium-content {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 100%;
+        margin-bottom: 40px;
+        border-bottom: 1px solid $font-and-icons;
+
+        .premium-image {
+            grid-area: 1/1/2/2;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .premium-text {
+            grid-area: 1/2/2/3;
+
+            .feat-head {
+                @include flex(row, flex-start, center);
+
+                .icon {
+                    @include square-size(40px,40px);
+                    position: relative;
+                    color: $theme-color;
+                }
+
+                h2 {
+                    @include font-style(18px, 700, $font-darkcolor, uppercase);
+                    margin: 0 0 0 20px;
+                }
+            }
+
+            p {
+                @include text($font-and-icons);
+                margin-left: 60px;
+            }
+        }
+    }
+
+    .dots {
+        @include dots($theme-color);
+        transform: translate(0,-100%);
+    }
+
+    button {
+        @include button($font-brightcolor, $theme-color, $font-mediumcolor);
+        margin: 40px 0 50px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .premium {
+
+        .premium-content {
+            margin: 0;
+            padding-bottom: 20px;
+
+            .premium-text {
+
+                .feat {
+
+                    .feat-head {
+
+                        span {
+                            transform: scale(0.8);
+                        }
+
+                        h2 {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .feature-text {
+                        display: none;
+                    }
+
+                    .show-feature {
+                        @include flex(column, center, center);
+                    }
+                }
+            }
+        }
+
+        .dots {
+            top: 98%;
+        }
+
+        button {
+            margin: 20px 0 50px 0;
+        }
+    }
+}

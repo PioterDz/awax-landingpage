@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\src\\webfonts\\fa-solid-900.eot":[["fa-solid-900.d1d07412.eot","src/webfonts/fa-solid-900.eot"],"src/webfonts/fa-solid-900.eot"],"./..\\src\\webfonts\\fa-solid-900.woff2":[["fa-solid-900.b164b3a8.woff2","src/webfonts/fa-solid-900.woff2"],"src/webfonts/fa-solid-900.woff2"],"./..\\src\\webfonts\\fa-solid-900.woff":[["fa-solid-900.7b5b70b9.woff","src/webfonts/fa-solid-900.woff"],"src/webfonts/fa-solid-900.woff"],"./..\\src\\webfonts\\fa-solid-900.ttf":[["fa-solid-900.595e6500.ttf","src/webfonts/fa-solid-900.ttf"],"src/webfonts/fa-solid-900.ttf"],"./..\\src\\webfonts\\fa-solid-900.svg":[["fa-solid-900.b805f895.svg","src/webfonts/fa-solid-900.svg"],"src/webfonts/fa-solid-900.svg"],"./..\\src\\webfonts\\fa-brands-400.eot":[["fa-brands-400.a98f32d1.eot","src/webfonts/fa-brands-400.eot"],"src/webfonts/fa-brands-400.eot"],"./..\\src\\webfonts\\fa-brands-400.woff2":[["fa-brands-400.db79a77a.woff2","src/webfonts/fa-brands-400.woff2"],"src/webfonts/fa-brands-400.woff2"],"./..\\src\\webfonts\\fa-brands-400.woff":[["fa-brands-400.ae7030dd.woff","src/webfonts/fa-brands-400.woff"],"src/webfonts/fa-brands-400.woff"],"./..\\src\\webfonts\\fa-brands-400.ttf":[["fa-brands-400.bf680f49.ttf","src/webfonts/fa-brands-400.ttf"],"src/webfonts/fa-brands-400.ttf"],"./..\\src\\webfonts\\fa-brands-400.svg":[["fa-brands-400.1a3428bb.svg","src/webfonts/fa-brands-400.svg"],"src/webfonts/fa-brands-400.svg"],"./..\\src\\webfonts\\fa-regular-400.eot":[["fa-regular-400.0e8c654b.eot","src/webfonts/fa-regular-400.eot"],"src/webfonts/fa-regular-400.eot"],"./..\\src\\webfonts\\fa-regular-400.woff2":[["fa-regular-400.65ed2a74.woff2","src/webfonts/fa-regular-400.woff2"],"src/webfonts/fa-regular-400.woff2"],"./..\\src\\webfonts\\fa-regular-400.woff":[["fa-regular-400.737536f1.woff","src/webfonts/fa-regular-400.woff"],"src/webfonts/fa-regular-400.woff"],"./..\\src\\webfonts\\fa-regular-400.ttf":[["fa-regular-400.90cc5f3c.ttf","src/webfonts/fa-regular-400.ttf"],"src/webfonts/fa-regular-400.ttf"],"./..\\src\\webfonts\\fa-regular-400.svg":[["fa-regular-400.a39a78a4.svg","src/webfonts/fa-regular-400.svg"],"src/webfonts/fa-regular-400.svg"],"./..\\src\\images\\hero-background.jpg":[["hero-background.42770b26.jpg","src/images/hero-background.jpg"],"src/images/hero-background.jpg"],"./..\\src\\images\\team\\team-background.jpg":[["team-background.352731d5.jpg","src/images/team/team-background.jpg"],"src/images/team/team-background.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64417" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55296" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

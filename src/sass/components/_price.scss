@@ -1,0 +1,105 @@
+.price {
+    @include flex(column, center, center);
+    background-color: $medium-background;
+    padding-bottom: 30px;
+    border-top: 1px solid $font-and-icons;
+
+    .price-container {
+        width: 100%;
+        @include flex(row, space-between, center);
+
+        .price-box {
+            @include flex(column, flex-start, center);
+            background-color: $bright-background;
+            padding: 20px 50px;
+
+            .btn-details {
+                display: none;
+            }
+
+            h3 {
+                @include font-style(16px, 700, $font-darkcolor, uppercase);
+            }
+
+            h1 {
+                @include font-style(30px, 700, $font-darkcolor, uppercase);
+                margin: 0;
+            }
+
+            h6 {
+                @include font-style(15px, 400, $font-and-icons, uppercase);
+                margin: 0 0 20px 0;
+            }
+            
+            .price-details {
+
+                p {
+                    @include font-style(14px, 400, $font-darkcolor, inherit);
+                    text-align: center;
+                    position: relative;
+                }
+            }
+
+            button {
+                @include button($font-brightcolor, $font-darkcolor, $theme-color);
+                padding: 15px 40px;
+                margin-top: 15px;
+
+                &:hover {
+                    @extend %onhover;
+                    background-color: $theme-color;
+                    color: $font-brightcolor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+    .price {
+
+        .price-container {
+
+            .price-box {
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .price {
+
+        .price-container {
+            @include flex(column, space-between, center);
+
+            .price-box {
+                padding: 20px 20vw;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                
+                .btn-details {
+                    @include flex(row, center, center);
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+
+                .price-details {
+                    display: none;
+                }
+
+                .show-details {
+                    @include flex(column, center, center);
+                }
+            }
+        }
+    }
+}
+
+
+

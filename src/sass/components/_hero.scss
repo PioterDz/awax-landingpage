@@ -1,0 +1,95 @@
+.hero {
+    @include flex(row, center, center);
+    background-image: url('../src/images/hero-background.jpg');
+    height: 750px;
+    object-fit: cover;
+    background-position: top;
+    position: relative;
+
+    &:before {
+        content: '';
+        @include square-size(100%,100%);
+        position: absolute;
+        background-color: rgba(black, 0.7);      
+    }
+    
+    .hero-text {
+        z-index: 1;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        position: relative;
+        
+        &:nth-child(1) {
+            color: $font-brightcolor;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 60px;
+
+            &:last-of-type {
+                color: $theme-color;
+            }
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+
+        button {
+            @include button($font-brightcolor, $theme-color, $font-darkcolor);
+        }
+    }
+
+    .dots {
+        @include dots($theme-color);
+    }
+
+    .phone-icon {
+        @extend %fa-icon;
+        @extend .fas;
+        position: absolute;
+        color: $font-brightcolor;
+        background-color: $theme-color;
+        @include square-size(75px, 75px);
+        border-radius: 50%;
+        top: 100%;
+        left: 85%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover {
+            @extend %onhover;
+            background-color: rgba($theme-color, 0.6);
+            color: rgba($font-darkcolor, 0.5);
+        }
+
+        &:before {
+            content: fa-content($fa-var-phone-alt);
+            position: absolute;
+            font-size: 50px;
+            top: 18%;
+            left: 18%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .hero {
+
+        .hero-text {
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        .phone-icon {
+            display: none;
+        }
+    }
+}
+

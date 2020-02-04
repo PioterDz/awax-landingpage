@@ -1,6 +1,28 @@
-@import './components/variables';
-@import './components/mixins';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap');
+
+@import './common/variables';
+@import './common/mixins';
+
+@import './common/patterns';
+
+@import './fontawesome/fontawesome';
+@import './fontawesome/solid';
+@import './fontawesome/brands';
+@import './fontawesome/regular';
 
 @import './components/navbar';
 @import './components/hero';
 @import './components/about';
+@import './components/services';
+@import './components/projects';
+@import './components/team';
+@import './components/clients';
+@import './components/brands';
+@import './components/price';
+@import './components/premium';
+@import './components/facts';
+@import './components/tellabout';
+@import './components/contact';
+@import './components/googlemap';
+@import './components/footer';
