@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap");
+@import url("https://use.fontawesome.com/6722d8bb1f.js");
 .nav .menu-list li:hover, .hero .hero-text button:hover, .hero .dots .dot:hover, .hero .phone-icon:hover, .about .about-columns .about-left-bar button:hover, .about .about-columns .about-right-bar:hover img, .about .about-columns .about-right-bar:hover .watch-video h2, .about .about-columns .about-right-bar:hover .watch-video .fa-play-circle:before, .projects .gallery-tabs .tab:hover, .projects .projects-gallery .row .gallery-img:hover img, .projects button:hover, .team .workers-list .worker .social-media i:hover, .team .dots .dot:hover, .clients .dots .dot:hover, .price .price-container .price-box button:hover, .premium .dots .dot:hover, .premium button:hover, .contact .contact-form form button:hover, footer .footer-container .arrow-up:hover .circle-arrow, footer .footer-container .arrow-up:hover .fa-chevron-up, footer .footer-container .socialmedia-footer .social-media .fa-stack:hover .fa-circle, footer .footer-container .subscribe form button:hover {
   transition: 0.3s ease-in; }
 
@@ -4950,7 +4951,7 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-image: url("/team-background.352731d5.jpg");
+  background-image: url("team-background.352731d5.jpg");
   height: 700px;
   object-fit: cover;
   position: relative; }
