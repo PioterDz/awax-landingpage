@@ -9,8 +9,9 @@
     "clean": "rimraf dist",
     "sass": "node-sass src/sass/style.scss -o css/",
     "nodemon": "nodemon -e scss -x \"npm run sass\"",
-    "parcel": "parcel ./index.html --open --no-autoinstall --port 8070",
-    "runall": "npm-run-all clean sass parcel"
+    "parcel": "parcel ./src/index.html --open --no-autoinstall --port 8070",
+    "runall": "npm-run-all clean sass parcel",
+    "build": "parcel build ./index.html"
   },
   "repository": {
     "type": "git",
